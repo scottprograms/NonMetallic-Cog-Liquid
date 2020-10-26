@@ -106,7 +106,7 @@ namespace MathForGames
             //Find the vector representing the distance between the actor and its target
             Vector2 direction = Position - Target.Position;
             //Get the magnitude of the distance vector
-            float distance = direction.Magnitude;
+            double distance = direction.Magnitude;
             //Use the inverse cosine to find the angle of the dot product in radians
             float angle = (float)Math.Acos(Vector2.DotProduct(Forward, direction.Normalized));
 
@@ -125,7 +125,7 @@ namespace MathForGames
         {
             //Calculate the distance between the current patrol point and the current position
             Vector2 direction = _currentPoint - Position;
-            float distance = direction.Magnitude;
+            double distance = direction.Magnitude;
 
             //Switch to the new patrol point if the enemy is within distance of the current one
             if (_currentPoint == PatrolPointA && distance <= 1)

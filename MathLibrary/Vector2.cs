@@ -31,11 +31,11 @@ namespace MathLibrary
             }
         }
 
-        public float Magnitude
+        public double Magnitude
         {
             get
             {
-                
+                return Math.Sqrt(X * X + Y * Y); 
             }
         }
 
